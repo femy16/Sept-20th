@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        .darkness{
+            background-color: black;
+            color: white;
+            font-family: Verdana;
+        }
+        .light{
+            background-color:lemonchiffon;
+            color: blue;
+            font-family:Verdana;
+        }
+    </style>
+</head>
+<body id="maincontent" class="darkness">
+    <img id="lightBulb" src="img/bulboff.gif" width="150px">
+    <div>
+        <button onclick="bulbon()">Lights on</button>
+        <button onclick="bulboff()">Lights off</button>
+    </div>
+    <div id="status">
+        
+    </div>
+    <script>
+    let bulbImage= document.getElementById("lightBulb");
+    let statusText =document.getElementById("status");
+    let maincontent =document.getElementById("maincontent");
+     function bulbon(){
+         bulbImage.src="img/bulbon.gif";
+         statusText.innerHTML="its too bright in here!";
+         maincontent.classList.remove("darkness");
+          maincontent.classList.add("light");
+     }
+      function bulboff(){
+         bulbImage.src="img/bulboff.gif";
+         statusText.innerHTML="its dark in here!";
+         maincontent.classList.remove("light");
+          maincontent.classList.add("darkness");
+     }
+     
+        // function bulbon(){
+        //     document.getElementById("lightBulb").src="img/bulbon.gif";
+        //     document.getElementById("status").innerHTML="<h2>It's too bright!!</h2>";
+            
+        // }
+        //  function bulboff(){
+        //     document.getElementById("lightBulb").src="img/bulboff.gif";
+        //      document.getElementById("status").innerHTML="<h2>It's dark!!</h2>";
+       
+        // }
+        
+    </script>
+</body>
+</html>
